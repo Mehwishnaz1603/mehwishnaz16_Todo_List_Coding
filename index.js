@@ -2,25 +2,26 @@
 /// Todo List In Typescriot//
 import inquirer from "inquirer";
 // user variable//
-let todos = [];
+let todolist = [];
 let condition = true;
+console.log("\n \t Welcome to Code WithMehwish - TodO_List Application");
 while (condition) {
     //open loop//
     let userinput = await inquirer.prompt([
         {
-            name: "TodoItem", type: "input", message: "What you want to Add Todo Item in listing:",
+            name: "TodoItem", type: "input", message: "What you want to Add Todo Item in todolist:",
         },
         {
             name: "AddMore", type: "confirm", message: "Do you want to AddMore:",
         }
     ]);
     //output of program
-    todos.push(userinput.TodoItem);
+    todolist.push(userinput.TodoItem);
     condition = userinput.AddMore;
-    console.log("todos:");
+    console.log("todolist:");
 }
 //Add More items//
-for (let i = 0; i < todos.length; i++) {
-    console.log(todos[i]);
+for (let i = 0; i < todolist.length; i++) {
+    console.log(todolist[i]);
 }
 //Exit loop//
