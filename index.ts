@@ -5,7 +5,7 @@ import inquirer from "inquirer";
 // user variable//
 let todolist = [];
  let condition = true;
- console.log("\n \t Welcome to Code WithMehwish - TodO_List Application");
+ console.log("Welcome to Code WithMehwish - TodO_List Application");
 while(condition)
 {
 //open loop//
@@ -28,5 +28,10 @@ while(condition)
 for (let i= 0; i<todolist.length;i++)
 {console.log(todolist[i])}
 
+//Delete TodoItems//
+let deletetodoitem = await inquirer.prompt([{
+   name:"deleToodoItem", type:"confirm", message:"Do you wamt to delete some Todoitems"
+}]);
+for (let i = 0; i<todolist.length; i++)
+{console.log("todolist"[i]);}
 
-//Exit loop//
